@@ -9,3 +9,8 @@ ifconfig命令用于显示或设置网络设备,使用ifconfig前要先安装net
 #### 2.2安装其他组件
 输入yum -y install lrzsz 安装lrzsz ,输入yum –y install wget安装wget下载组件
 
+<h3>3.虚拟机和本机相互通讯</h3>
+在进行相互通讯的前要先安装SecureCRT,然后在使用ifconfig修改虚拟机IP地址(如图2-15),同时打开cmd,同时使用ping输入相应的ip地址(如图3-1)。
+
+#### 3.1传送文件
+在虚拟机和本机通讯成功后,在SecureCRT上输入rz导入mysql,tomcat,jdk(如图3-2).

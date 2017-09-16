@@ -142,3 +142,17 @@ source /etc/profile,  <br/>
 
 ![image023.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image023.png)
 ![image024.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image024.png)
+
+<h5>5.2.3.安装tomcat</h5>
+3.1 tomcat版本 <br/>
+apache-tomcat-8.5.11.tar <br/>
+3.2 安装步骤 <br/>
+1.解压tomcat,命令行: <br/>
+# tar -xzvf apache-tomcat-8.5.11.tar.gz -C /usr/java/  <br/>
+2.将tomcat解压到/usr/java/下,重命名tomcat:  <br/>
+# mv apache-tomcat-8.5.11.tar.gz tomcat,  <br/>
+3.进入到/tomcat/bin/的目录,运行:  <br/>
+# ./startup.sh,  <br/>
+如果出现commit start,就是安装成功,在通过elinks进行访问(如图3-1):  <br/>
+elinks http:localhost:8080,  <br/>
+

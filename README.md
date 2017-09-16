@@ -47,4 +47,12 @@ find命令用来在指定目录下查找文件
 ![image014.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image014.png)
 #### 3.网络通讯
 ifconfig命令用于显示或设置网络设备,使用ifconfig前要先安装net-tools,命令yum –y install net-tools
-![image015.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image015.png)
+![image016.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image016.png)
+#### 4.安装其他组件
+输入yum -y install lrzsz 安装lrzsz ,输入yum –y install wget安装wget下载组件
+<h3>3.虚拟机和本机相互通讯</h3>
+在进行相互通讯的前要先安装SecureCRT,然后在使用ifconfig修改虚拟机IP地址,同时打开cmd,同时使用ping输入相应的ip地址.
+![image017.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image017.png)
+#### 4.1网络通讯
+在虚拟机和本机通讯成功后,在SecureCRT上输入rz导入mysql,tomcat,jdk(如图3-2).
+![image018.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image018.png)

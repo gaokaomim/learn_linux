@@ -156,3 +156,11 @@ apache-tomcat-8.5.11.tar <br/>
 如果出现commit start,就是安装成功,在通过elinks进行访问(如图3-1):  <br/>
 elinks http:localhost:8080,  <br/>
 
+![image035.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image035.png)
+
+
+<h5>svn安装和使用</h5>
+ svn版本
+ 
+![image036.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image036.png)
+svn 版本是1.7.14

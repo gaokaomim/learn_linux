@@ -213,3 +213,72 @@ Redis 3.2.7 <br/>
 ![image039.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image039.png)
 ![image040.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image040.png)
 
+<h3>7.PHP安装</h3>
+7.1 php版本  <br/>
+php7.0.16  <br/>
+7.2 安装步骤  <br/>
+ 1.先通过yum安装epel-release,  <br/>
+ yum install epel-release,  <br/>
+2.再通过rpm进行安装:  <br/>
+ rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm,  <br/>
+3.在通过yum 进行安装:   <br/>
+ yum install php70w,  <br/>
+安装结果,  <br/>
+4.检查php版本命令行:  <br/>
+ php –v.  <br/>
+ 
+![image041.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image041.png)
+![image042.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image042.png)
+
+<h3>8.Apache安装</h3>
+8.1 apache版本 <br/>
+Apache/2.4.6 (CentOS) <br/>
+8.2 安装步骤  <br/>
+1.先通过yum 安装httpd: <br/>
+ yum install httpd, <br/>
+2.在修改httpd.conf里的serverName: <br/>
+ vi /etc/httpd/conf/httpd.conf, <br/>
+3.在进入/var/www/html命令: <br/>
+ cd /var/www/html, <br/>
+4.在新建html页面, 添加一段html代码: <br/>
+ vi index.html, <br/>
+5.在通过elinks显示这个页面: <br/>
+ elinks 10.0.50.19:80, <br/>
+就可以看到这个页面了 <br/>
+
+![image043.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image043.png)
+![image044.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image044.png)
+![image045.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image045.png)
+
+<h3>9.nginx安装</h3> 
+9.1 nginx版本 <br/>
+nginx version: nginx/1.11.10 <br/>
+9.2 安装步骤 <br/>
+1.要先通过rz将nginx上传到linux,  <br/>
+2.在解压: <br/>
+ tar –xzvf nginx-1.11.10.tar.gz –C /usr/local/, <br/>
+3.进入nginx文件夹,还要先装一些工具和库(如图8-1): <br/>
+ yum –y install gcc-c++,  <br/>
+4.基础模块(如图8-2):   <br/>
+ yum –y install pcre-devel,  <br/>
+5.安装插件(如图8-3):  <br/>
+ yum –y install zlib-devel,  <br/>
+6. 安装ssl功能需要openssl库: <br/>
+ yum -y install openssl-devel, <br/>
+7.在对nginx进行编译: <br/>
+ ./configure –prefix=/usr/local/nginx,  <br/>
+8.进行make编译, <br/>
+9.进行make install安装, <br/>
+10.在进入# cd /usr/etc/ngin/sbin, <br/>
+11.再启动nginx命令: <br/>
+ ./nginx, <br/>
+12.通过elinks访问本地nginx结果: <br/>
+elinks http://localhost, <br/>
+
+![image046.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image046.png)
+![image047.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image047.png)
+![image048.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image048.png)
+![image049.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image049.png)
+![image050.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image050.png)
+![image051.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image051.png)
+![image052.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image052.png)

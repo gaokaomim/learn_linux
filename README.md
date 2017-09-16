@@ -74,7 +74,7 @@ ifconfig命令用于显示或设置网络设备,使用ifconfig前要先安装net
 
 #### 3.2安装环境
 
-##### 3.3安装mysql
+##### 3.2.1安装mysql
 1.要先创建组:<br/>
  groupadd mysql。<br/>
 2.用户:<br/>
@@ -119,3 +119,26 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES  <br/>
 socket = /work/program/mysql/tmp/mysql.sock。<br/>
 18. 这时要求输入密码,输入完密码,mysql会要求要改掉root的密码才能操作,最后mysql就运行了<br/>
 
+![image019.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image019.png)
+![image020.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image020.png)
+![image021.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image021.png)
+
+##### 3.2.2安装java环境
+2.1 jdk版本<br/>
+Jdk版本: jdk-8u121-linux-x64.tar<br/>
+2.2 安装步骤<br/>
+新建java文件夹# mkdir –p /usr/java/,解压到tar –xzvf jdk-8u121-linux-x64.tar.gz –C /usr/java/,回到home目录,编辑vi /etc/profile,在文件最后添加<br/>
+export JAVA_HOME=/usr/java/jdk <br/>
+export PATH=$JAVA_HOME/bin:$PATH <br/>
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar, <br/>
+添加完后:wq保存完退出, <br/>
+
+![image022.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image022.png)
+
+在输入命令生效配置的java环境: <br/>
+# source /etc/profile,  <br/>
+再输入java会跳出很多提示信息(如图2-2), 再输入java –version <br/>
+
+
+![image023.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image023.png)
+![image024.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image024.png)

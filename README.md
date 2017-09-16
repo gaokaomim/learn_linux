@@ -7,7 +7,7 @@
 <h3>2.熟悉命令</h3>
 <pre>学习linux最重要的是熟悉linux常用命令.</pre>
 
-#### 2.1磁盘管理
+<h4>2.1磁盘管理</h4>
 ls命令用于查看目录有哪些文件,ls –al作用是查看全部文件(包括隐藏文件)显示文件的详细信息。
 
 ![image003.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image003.png)
@@ -28,7 +28,7 @@ du会显示指定的目录或文件所占用的磁盘空间
 
 ![image009.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image009.png) 
 
-#### 2.2文件管理
+<h4>2.2文件管理</h4>
 cat命令用于查看纯文本文件(较短的)
 
 ![image009.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image009.png) 
@@ -53,28 +53,28 @@ find命令用来在指定目录下查找文件
 
 ![image014.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image014.png)
 
-#### 3.网络通讯
+<h3>3.网络通讯</h3>
 ifconfig命令用于显示或设置网络设备,使用ifconfig前要先安装net-tools,命令yum –y install net-tools
 
 ![image016.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image016.png)
 
-#### 4.安装其他组件
+<h3>4.安装其他组件</h3>
 输入yum -y install lrzsz 安装lrzsz ,输入yum –y install wget安装wget下载组件
 
-<h3>3.虚拟机和本机相互通讯</h3>
+<h3>5.虚拟机和本机相互通讯</h3>
 
 在进行相互通讯的前要先安装SecureCRT,然后在使用ifconfig修改虚拟机IP地址,同时打开cmd,同时使用ping输入相应的ip地址.
 
 ![image017.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image017.png)
 
-#### 3.1网络通讯
+<h4>5.1网络通讯</h4>
 在虚拟机和本机通讯成功后,在SecureCRT上输入rz导入mysql,tomcat,jdk.
 
 ![image018.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image018.png)
 
-#### 3.2安装环境
+<h4>5.2安装环境</h4>
 
-##### 3.2.1安装mysql
+<h5>5.2.1安装mysql</h5>
 1.要先创建组:<br/>
  groupadd mysql。<br/>
 2.用户:<br/>
@@ -123,7 +123,7 @@ socket = /work/program/mysql/tmp/mysql.sock。<br/>
 ![image020.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image020.png)
 ![image021.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image021.png)
 
-##### 3.2.2安装java环境
+<h5>5.2.2安装java环境</h5>
 2.1 jdk版本<br/>
 Jdk版本: jdk-8u121-linux-x64.tar<br/>
 2.2 安装步骤<br/>
@@ -136,7 +136,7 @@ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar, <br/>
 ![image022.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image022.png)
 
 在输入命令生效配置的java环境: <br/>
-# source /etc/profile,  <br/>
+source /etc/profile,  <br/>
 再输入java会跳出很多提示信息(如图2-2), 再输入java –version <br/>
 
 

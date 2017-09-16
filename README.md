@@ -17,8 +17,25 @@ cd命令用于切换当前工作目录至目标目录,cd /usr切换到usr目录(
 ![image005.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image005.png)
 ![image006.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image006.png)
 
-<h3>3.虚拟机和本机相互通讯</h3>
-在进行相互通讯的前要先安装SecureCRT,然后在使用ifconfig修改虚拟机IP地址(如图2-15),同时打开cmd,同时使用ping输入相应的ip地址(如图3-1)。
+pwd命令用于显示工作目录(图2-5)
+![image007.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image007.png) 
 
-#### 3.1传送文件
-在虚拟机和本机通讯成功后,在SecureCRT上输入rz导入mysql,tomcat,jdk(如图3-2).
+mkdir命令用于建立新的子目录。mkdir –p 确保目录名称存在，不存在的就建一个(如图2-6)
+
+![image008.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image008.png) 
+
+du会显示指定的目录或文件所占用的磁盘空间(图2-7)
+
+![image009.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image009.png) 
+
+#### 2.2文件管理
+cat命令用于查看纯文本文件(较短的) (图2-8)
+
+![image009.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image009.png) 
+
+more命令用于查看纯文本文件(较长的)(如图2-9)
+
+![image010.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image010.png) 
+
+mv命令用来为文件或目录改名、或将文件或目录移入其它位置(如图2-10)
+![image011.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image011.png) 

@@ -158,7 +158,6 @@ elinks http:localhost:8080,  <br/>
 
 ![image035.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image035.png)
 
-
 <h5>5.2.4.svn安装和使用</h5>
  svn版本
  
@@ -188,3 +187,29 @@ svn 版本是1.7.14
 ![image027.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image027.png)
 ![image028.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image028.png)
 ![image029.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image029.png)
+
+<h3>6.redis安装</h3>
+6.1 redis版本 <br/>
+Redis 3.2.7 <br/>
+6.2 安装步骤 <br/>
+1.先通过rz将redis上传到linux上,在重命名redis: <br/>
+ mv redis-3.2.7.tar.gz redis, <br/>
+2.在新建一个文件夹: <br/>
+ mkdir -p /usr/local/redis, <br/>
+3.再解压到redius文件夹: <br/>
+ tar –xzvf redis –C /usr/local/redis, <br/>
+4.在进入redis: <br/>
+ cd /usr/local/redis, <br/>
+5.在通过make进行安装: <br/>
+ make <br/>
+最后会出现  Hint: It's a good idea to run 'make test' ;) make[1]: 离开目录“/usr/java/redis/src”,就说明安装成功了。 <br/>
+6.接下来要启动redis: <br/>
+ src/redis-server,  <br/>
+7.使用redis客户端测试: <br/>
+ src/redis-cli <br/>
+ 
+![image037.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image037.png)
+![image038.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image038.png)
+![image039.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image039.png)
+![image040.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image040.png)
+

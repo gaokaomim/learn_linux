@@ -148,19 +148,43 @@ source /etc/profile,  <br/>
 apache-tomcat-8.5.11.tar <br/>
 3.2 安装步骤 <br/>
 1.解压tomcat,命令行: <br/>
-# tar -xzvf apache-tomcat-8.5.11.tar.gz -C /usr/java/  <br/>
+ tar -xzvf apache-tomcat-8.5.11.tar.gz -C /usr/java/  <br/>
 2.将tomcat解压到/usr/java/下,重命名tomcat:  <br/>
-# mv apache-tomcat-8.5.11.tar.gz tomcat,  <br/>
+ mv apache-tomcat-8.5.11.tar.gz tomcat,  <br/>
 3.进入到/tomcat/bin/的目录,运行:  <br/>
-# ./startup.sh,  <br/>
+ ./startup.sh,  <br/>
 如果出现commit start,就是安装成功,在通过elinks进行访问(如图3-1):  <br/>
 elinks http:localhost:8080,  <br/>
 
 ![image035.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image035.png)
 
 
-<h5>svn安装和使用</h5>
+<h5>5.2.4.svn安装和使用</h5>
  svn版本
  
 ![image036.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image036.png)
+
 svn 版本是1.7.14
+
+4.2 安装步骤 <br/>
+1.先通过yum进行安装subversion先输入命令: <br/>
+ yum install subversion <br/>
+2.创建svn版本库目录:  <br/>
+ mkdir –p /var/svn/svnrepos, <br/>
+3.进入到conf目录,设置账户密码: <br/>
+ vi passwd, <br/>
+4.设置权限: <br/>
+ vi authz, <br/>
+5.修改svnserve.conf: <br/>
+ vi svnserve.conf, <br/>
+6.关闭防火墙权限: <br/>
+ sudo systemctl stop firewalld.service, <br/>
+7.启动svn版本库: <br/>
+ svnserve –d –r /var/svn/svnrepos, <br/>
+8.在windows上右键打开SVN Checkout,输入svn IP地址,点击OK,输入账户和密码,点击确定,就成功了。 <br/>
+
+![image025.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image025.png)
+![image026.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image026.png)
+![image027.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image027.png)
+![image028.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image028.png)
+![image029.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image029.png)

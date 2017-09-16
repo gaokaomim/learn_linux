@@ -75,54 +75,47 @@ ifconfig命令用于显示或设置网络设备,使用ifconfig前要先安装net
 #### 3.2安装环境
 
 ##### 3.3安装mysql
-1.1 安装环境
-1.1.1 mysql版本
-mysql版本是5.7.17(64位)
-1.1.2 linux版本
-Linux版本是centos 7 mini版(64位)
-1.1.3 虚拟机版本
-Oracle VM VirtualBox 版本 5.1.12 r112440 (Qt5.6.2)
-1.2 安装步骤
-1.要先创建组:
- groupadd mysql。
-2.用户:
- useradd -r -g mysql mysql。
-3.新建目录:
- mkdir –p /work/program。
-4.将mysql解压位置自定义(如图1-1):
- tar –xzvf mysql –C /work/program,。
-注:如果mysql目录下没有data目录,可以手动创建一个。
-5.进入到mysql目录下:
- cd /work/program/mysql。
-6.同时将所有目录和组均设为mysql:
- chown mysql:mysql -R .  。
-7.进行初始化:(注:path是你安装mysql的路径)
- /path/bin/mysqld –initialize --user=mysql --datadir=/path/data --basedir=/path
- 会获取到MySQL登录密码。
-8.现将mysql/support-files下的my-default.cnf改名为my.cnf，拷到/etc命令如:
- cp /work/program/mysql/support-files/my-default.cnf /etc/my.cnf。
-9.修改关键配置: (如图1-2)
-[mysqld]
-basedir = /work/program/mysql
-datadir = /work/program/mysql/data
-port = 3306
-socket = /work/program/mysql/tmp/mysql.sock
-sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES 
-10.创建新目录:
-同时要进入mysql目录新建tmp目录 # mkdir –p tmp。
-11.在mysql运行服务器程序命令:
- ./bin/mysqld_safe& 。
-12.将{mysql}./support-files/mysql.server拷贝为/etc/init.d/mysql:
- cp mysql.server etc/init.d/mysql。
-13.设置权限:
- chmod +x /etc/init.d/mysql。
-14.把mysql注册为开机启动服务:
- chkconfig --add mysql。
-15. 手动进行服务的开启:
- /etc/init.d/mysql/start。
-16.进行客户端连接测试:
- ./bin/mysql/ -uroot –p。
-17.需要在在my.cnf中填加:
-[client]
-socket = /work/program/mysql/tmp/mysql.sock。
-18. 这时要求输入密码,输入完密码,mysql会要求要改掉root的密码才能操作,最后mysql就运行了(如下图1-3)
+1.要先创建组:<br/>
+ groupadd mysql。<br/>
+2.用户:<br/>
+ useradd -r -g mysql mysql。<br/>
+3.新建目录:<br/>
+ mkdir –p /work/program。<br/>
+4.将mysql解压位置自定义:<br/>
+ tar –xzvf mysql –C /work/program,<br/>
+注:如果mysql目录下没有data目录,可以手动创建一个。<br/>
+5.进入到mysql目录下:<br/>
+ cd /work/program/mysql。<br/>
+6.同时将所有目录和组均设为mysql:<br/>
+ chown mysql:mysql -R .  。<br/>
+7.进行初始化:(注:path是你安装mysql的路径)<br/>
+ /path/bin/mysqld –initialize --user=mysql --datadir=/path/data --basedir=/path <br/>
+ 会获取到MySQL登录密码。<br/>
+8.现将mysql/support-files下的my-default.cnf改名为my.cnf，拷到/etc命令如:<br/>
+ cp /work/program/mysql/support-files/my-default.cnf /etc/my.cnf。<br/>
+9.修改关键配置:<br/>
+[mysqld] <br/>
+basedir = /work/program/mysql <br/>
+datadir = /work/program/mysql/data <br/>
+port = 3306 <br/>
+socket = /work/program/mysql/tmp/mysql.sock <br/>
+sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES  <br/>
+10.创建新目录: <br/>
+同时要进入mysql目录新建tmp目录 # mkdir –p tmp。<br/>
+11.在mysql运行服务器程序命令: <br/>
+ ./bin/mysqld_safe& 。 <br/>
+12.将{mysql}./support-files/mysql.server拷贝为/etc/init.d/mysql: <br/>
+ cp mysql.server etc/init.d/mysql。 <br/>
+13.设置权限: <br/>
+ chmod +x /etc/init.d/mysql。<br/>
+14.把mysql注册为开机启动服务:<br/>
+ chkconfig --add mysql。<br/>
+15. 手动进行服务的开启:<br/>
+ /etc/init.d/mysql/start。<br/>
+16.进行客户端连接测试: <br/>
+ ./bin/mysql/ -uroot –p。 <br/>
+17.需要在在my.cnf中填加: <br/>
+[client] <br/>
+socket = /work/program/mysql/tmp/mysql.sock。<br/>
+18. 这时要求输入密码,输入完密码,mysql会要求要改掉root的密码才能操作,最后mysql就运行了<br/>
+

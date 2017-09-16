@@ -6,6 +6,7 @@
 ![image002.png](https://github.com/gaokaomim/learn_linux/blob/master/image/image002.png)
 <h3>2.熟悉命令</h3>
 <pre>学习linux最重要的是熟悉linux常用命令.</pre>
+
 #### 2.1磁盘管理
 ls命令用于查看目录有哪些文件,ls –al作用是查看全部文件(包括隐藏文件)显示文件的详细信息(如图2-1)。
 
